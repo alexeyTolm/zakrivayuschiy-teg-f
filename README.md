@@ -20,3 +20,6 @@
 
 Ссылка на репозиторий
 https://github.com/alexeyTolm/zakrivayuschiy-teg-f
+
+Ссылка на сайт опубликованный через GitHub
+https://alexeytolm.github.io/zakrivayuschiy-teg-f
