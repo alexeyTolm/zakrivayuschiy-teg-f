@@ -50,7 +50,6 @@
 .header__accent-text {
   font-family: var(--font-accent);
   font-weight: 400;
-  font-size: 23px;
   font-size: clamp(14px, 3vw, 23px);
   line-height: 100%;
   letter-spacing: 0%;
@@ -177,8 +176,8 @@ main {
 
 .card__label {
   position: absolute;
-  top: 25px;       
-  right: 25px;     
+  top: 25px;
+  right: 25px;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   font-family: var(--font-accent);
@@ -213,8 +212,7 @@ main {
   border: 2px solid #000;
   padding: 20.5px 20px;
   background-color: #fff;
-  width: clamp(306px, 295.79px + 2.72vw, 335px);
-  width: fit-content;
+  width: clamp(306px, 295.79px + 2.72vw, 335px) fit-content;
 }
 
 .button__disket-svg {
