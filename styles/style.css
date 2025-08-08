@@ -45,6 +45,7 @@
   text-transform: uppercase;
   color: #000;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .header__accent-text {
@@ -80,7 +81,6 @@ main {
 .cards__main-text {
   font-family: var(--font-main);
   font-variation-settings: 'wght' var(--font-title-weight);
-  font-weight: 715;
   font-style: Black;
   font-size: 18px;
   line-height: 100%;
@@ -92,16 +92,19 @@ main {
 .cards__accent-text {
   font-family: var(--font-main);
   font-variation-settings: 'wght' var(--font-text-weight);
-  font-weight: 410;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0%;
 }
 
+.cards__sub-accent-text {
+  font-variation-settings: 'wght' var(--font-text-weight);
+}
+
 .card__about {
   display: grid;
   padding: 25px;
-  gap: 25px;
+  gap: 26px;
 }
 
 .card__buttons {
@@ -117,10 +120,6 @@ main {
   font-size: 14px;
   line-height: 90%;
   letter-spacing: 0%;
-  padding-top: 11.5px;
-  padding-bottom: 11.5px;
-  border: 2px solid #000000;
-  width: 130px;
 }
 
 .card__like-button {
@@ -130,6 +129,14 @@ main {
   justify-content: center;
   box-shadow: none;
   border: 2px solid black;
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
+  width: 130px;
+  height: 38px;
+}
+
+.modal_btm-ok {
+  align-items: center;
 }
 
 .btn-animated-bg {
@@ -146,32 +153,43 @@ main {
   z-index: 1;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.5s;
+  transition: 0.5s ease-in-out;
   pointer-events: none;
 }
 
 
-.btn-animated-bg:hover::before,
-.btn-animated-bg:focus-visible::before {
+.btn-animated-bg:hover::before {
   transform: scaleX(1);
 }
 
-.btn-animated-bg .button__text,
-.btn-animated-bg .button-save__text,
-.btn-animated-bg .modal_btm-ok {
+
+.btn-animated-bg .button__text {
   position: relative;
   z-index: 2;
   color: #fff;
   mix-blend-mode: difference;
 }
 
-.card__image-wrapper {
+.btn-animated-bg .button__disket-svg {
   position: relative;
+  z-index: 1;
+  color: #fff;
+  mix-blend-mode: difference;
+  display: inline-block;
+}
+
+.card__image-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
 }
 
 .card__image {
   width: clamp(371px, calc(256.563px + 30.516vw), 696px);
   height: clamp(371px, calc(256.563px + 30.516vw), 696px);
+  object-fit: contain;
 }
 
 .card__label {
@@ -210,7 +228,7 @@ main {
   display: flex;
   margin: 0 auto;
   border: 2px solid #000;
-  padding: 20.5px 20px;
+  padding: 12px 20px;
   background-color: #fff;
   width: clamp(306px, 295.79px + 2.72vw, 335px) fit-content;
 }
@@ -270,13 +288,11 @@ main {
 }
 
 .modal::backdrop {
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, .75);
 
 }
 
-.card__like-button:focus,
-.save__button:focus,
-.modal__ok-btn:focus {
+.focus:focus {
   outline: none;
   box-shadow: 2px 2px 0 0 black;
   transition: box-shadow 0.3s ease;
@@ -311,44 +327,37 @@ main {
   fill: transparent;
 }
 
-.like-icon:hover .core,
-.card__like-button:hover .core {
+.like-icon:hover .core {
   transition: fill 0.3s linear 0s;
   fill: black;
 }
 
-.like-icon:hover .main-body,
-.card__like-button:hover .main-body {
+.like-icon:hover .main-body {
   transition: fill 0.3s linear 0.05s;
   fill: black;
 }
 
-.like-icon:active .core,
-.card__like-button:active .core {
+.like-icon:active .core {
   transition: fill 0.3s linear 0s;
   fill: red;
 }
 
-.like-icon:active .main-body,
-.card__like-button:active .main-body {
+.like-icon:active .main-body {
   transition: fill 0.3s linear 0.05s;
   fill: red;
 }
 
-.like-icon.is-liked .core,
-.card__like-button.is-liked .core {
+.like-icon.is-liked .core {
   transition: fill 0.3s linear 0s;
   fill: #FF0000;
 }
 
-.like-icon.is-liked .main-body,
-.card__like-button.is-liked .main-body {
+.like-icon.is-liked .main-body {
   transition: fill 0.3s linear 0.05s;
   fill: #FF0000;
 }
 
-.like-icon.is-liked .contour,
-.card__like-button.is-liked .contour {
+.like-icon.is-liked .contour {
   transition: fill 0.3s linear 0.06s;
   fill: #FF0000;
 }
@@ -408,5 +417,9 @@ main {
 
   .card__icon-button {
     flex-direction: column;
+  }
+
+  .modal__ok-btn {
+    padding: 12.5px 116.5px;
   }
 }
