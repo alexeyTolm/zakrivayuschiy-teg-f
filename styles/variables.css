@@ -23,7 +23,7 @@
       #e7e7e7 0.01%,
       #1a1a1a 100%
     );
-    --content-width: clamp(24.88rem, 16.285rem + 30.516vw, 43.75rem);
+    --content-width: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
     --accent-color: black;
     --animation-fill-color: red;
     --contour-color: black;
