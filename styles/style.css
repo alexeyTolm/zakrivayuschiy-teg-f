@@ -432,4 +432,8 @@ main {
   .modal__ok-btn {
     padding: 12.5px 116.5px;
   }
+
+  .modal__text {
+    width: 230px;
+  }
 }
