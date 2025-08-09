@@ -10,6 +10,7 @@
 
 */
 
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -20,11 +21,18 @@
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: var(--content-width);
-  margin: 0 auto;
   padding: clamp(122px, calc(119.183px + 0.751vw), 130px) clamp(16px, calc(-21.5px + 10vw), 122.5px);
   background-color: #fff;
   border: 2px solid #000;
@@ -258,7 +266,6 @@ main {
   display: flex;
   gap: 20px;
   width: 293px;
-  height: 63px;
 }
 
 .modal__text {
@@ -272,7 +279,9 @@ main {
 }
 
 .modal__disket {
+  align-self: center;
   width: 39px;
+  height: 39px;
 }
 
 .modal__ok-btn {
@@ -292,10 +301,13 @@ main {
 
 }
 
+.focus {
+  transition: box-shadow 0.3s ease;
+}
+
 .focus:focus {
   outline: none;
   box-shadow: 2px 2px 0 0 black;
-  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -400,8 +412,6 @@ main {
 
 
 @media(max-width: 375px) {
-  
-
   .save__button {
     display: flex;
     flex-direction: column;
